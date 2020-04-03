@@ -1,0 +1,26 @@
+.interface {
+  grid-row: 2;
+  grid-column: grid-content-start / grid-content-end;
+  background-color: $white;
+  padding: 5rem;
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 5px 16px 0 $black(0, 0, 0, 0.1);
+}
+
+.interface__userScore,
+.interface__computerScore {
+  display: inline-block;
+  margin: 2rem 0;
+}
+
+.interface__description {
+  &--rules {
+    margin: 1rem;
+  }
+
+  &--round {
+    margin: 1rem;
+  }
+}

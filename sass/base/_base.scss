@@ -1,0 +1,33 @@
+// General Stylings
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $text-color;
+  font-weight: 300;
+  line-height: 1.6;
+  background-color: $primary-background-color;
+  transition: background-color 1s ease-out;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: max-content max-content;
+  grid-template-columns:
+    [grid-full-start] minmax(0rem, 1fr) [grid-content-start] repeat(
+      8,
+      [col-start] minmax(min-content, 14rem) [col-end]
+    )
+    [grid-content-end] 1fr [grid-full-end];
+}

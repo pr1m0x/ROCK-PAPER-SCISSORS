@@ -1,0 +1,12 @@
+.header {
+  grid-row: 1;
+  grid-column: grid-full-start / grid-full-end;
+  background-color: $black;
+  text-align: center;
+  padding: 2rem 0;
+
+  & h1 {
+    color: $white;
+    text-transform: uppercase;
+  }
+}

@@ -1,0 +1,52 @@
+.boxes {
+  display: grid;
+  justify-content: center;
+  grid-column: grid-content-start / grid-content-end;
+  grid-template-columns: repeat(3, minmax(min-content, 20%));
+}
+
+.box__scissors,
+.box__paper,
+.box__rock {
+  justify-self: center;
+  background-color: $black;
+  width: 15rem;
+  height: 15rem;
+  padding: 2rem;
+  border-radius: 2rem;
+  margin-right: 1rem;
+  box-shadow: 0 5px 16px 0 $black(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.box__scissors:hover {
+  @include shaker;
+}
+
+.box__paper:hover {
+  @include shaker;
+}
+
+.box__rock:hover {
+  @include shaker;
+}
+
+.resultBox {
+  display: none;
+  height: 50rem;
+  grid-row: 2;
+  grid-column: grid-content-start / grid-content-end;
+  background-color: $white;
+  padding: 5rem;
+  text-align: center;
+  border-bottom-left-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  box-shadow: 0 5px 16px 0 $black(0, 0, 0, 0.1);
+  align-self: center;
+
+  & h1 {
+    color: $black;
+    justify-self: center;
+    align-self: center;
+  }
+}
